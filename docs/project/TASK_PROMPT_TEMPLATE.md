@@ -60,6 +60,15 @@ Agent 适配：
 
 <commands>
 
+Git 操作：
+
+- 是否允许本次执行 git add / commit / push：
+  <yes/no>
+- 推荐 commit message：
+  <type>(<scope>): <summary>
+- 是否允许创建 tag：
+  <yes/no>
+
 完成后汇报：
 
 - 修改了哪些文件
@@ -68,6 +77,12 @@ Agent 适配：
 - 哪些通过
 - 哪些未运行及原因
 - 是否有失败或不确定结果
+- 当前分支
+- commit hash
+- commit message
+- push 状态
+- 是否仍有未提交修改
+- 是否创建 tag
 - 当前是否可以进入下一步
 ```
 
@@ -98,6 +113,7 @@ Agent 适配：
 可选阅读：
 - docs/README.md
 - docs/project/REPO_STRUCTURE.md
+- docs/project/GIT_AND_STAGE_WORKFLOW.md
 
 不要阅读：
 - outputs/
@@ -124,12 +140,27 @@ Agent 适配：
 
 - git diff --check
 
+Git 操作：
+
+- 是否允许本次执行 git add / commit / push：
+  <yes/no>
+- 推荐 commit message：
+  docs(<scope>): <summary>
+- 是否允许创建 tag：
+  <yes/no>
+
 完成后汇报：
 
 - 修改文件
 - 新增或更新的文档规则
 - 验证命令及结果
 - 未运行项及原因
+- 当前分支
+- commit hash
+- commit message
+- push 状态
+- 是否仍有未提交修改
+- 是否创建 tag
 - 是否可以进入下一步
 ```
 
@@ -161,6 +192,7 @@ Agent 适配：
 - <current stage summary>
 - <current stage closure>
 - <directly related scripts or configs>
+- docs/project/GIT_AND_STAGE_WORKFLOW.md
 
 不要阅读：
 - outputs/
@@ -186,6 +218,15 @@ Agent 适配：
 
 <commands>
 
+Git 操作：
+
+- 是否允许本次执行 git add / commit / push：
+  <yes/no>
+- 推荐 commit message：
+  <type>(stageX.Y): <summary>
+- 是否允许创建 tag：
+  <yes/no>
+
 完成后汇报：
 
 - 修改文件
@@ -193,6 +234,12 @@ Agent 适配：
 - 验证命令及结果
 - 未运行项及原因
 - 当前阶段剩余事项
+- 当前分支
+- commit hash
+- commit message
+- push 状态
+- 是否仍有未提交修改
+- 是否创建 tag
 - 是否建议进入下一步
 ```
 
@@ -249,6 +296,15 @@ Agent 适配：
 
 <commands>
 
+Git 操作：
+
+- 是否允许本次执行 git add / commit / push：
+  <yes/no>
+- 推荐 commit message：
+  fix(<scope>): <summary>
+- 是否允许创建 tag：
+  <yes/no>
+
 完成后汇报：
 
 - 根因判断
@@ -257,6 +313,12 @@ Agent 适配：
 - 验证命令及结果
 - 未运行项及原因
 - 残余风险
+- 当前分支
+- commit hash
+- commit message
+- push 状态
+- 是否仍有未提交修改
+- 是否创建 tag
 - 是否可以进入下一步
 ```
 
@@ -314,6 +376,15 @@ Agent 适配：
 
 - git diff --check
 
+Git 操作：
+
+- 是否允许本次执行 git add / commit / push：
+  <yes/no>
+- 推荐 commit message：
+  docs(<scope>): <summary>
+- 是否允许创建 tag：
+  <yes/no>
+
 完成后汇报：
 
 - 修改文件
@@ -321,5 +392,11 @@ Agent 适配：
 - 通过项
 - 失败项
 - 未运行项及原因
+- 当前分支
+- commit hash
+- commit message
+- push 状态
+- 是否仍有未提交修改
+- 是否创建 tag
 - 是否建议继续、修复、暂停或进入下一阶段
 ```

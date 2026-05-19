@@ -13,6 +13,7 @@
 - [project/TASK_PROMPT_TEMPLATE.md](project/TASK_PROMPT_TEMPLATE.md)：通用任务提示词，以及文档维护、阶段推进、bug 修复、closure / failure analysis 模板。
 - [project/DEVELOPMENT_BOUNDARIES.md](project/DEVELOPMENT_BOUNDARIES.md)：planning、artifact、validation、execution 的边界规则。
 - [project/AGENT_USAGE_POLICY.md](project/AGENT_USAGE_POLICY.md)：Codex、Claude Code、DeepSeek、其它 VSCode Agent 的使用和切换策略。
+- [project/GIT_AND_STAGE_WORKFLOW.md](project/GIT_AND_STAGE_WORKFLOW.md)：Git 工作流、commit message、Stage 编号、tag 和汇报规则。
 - [project/REPO_STRUCTURE.md](project/REPO_STRUCTURE.md)：推荐仓库结构和目录用途。
 
 ## 阶段文档
