@@ -4,7 +4,9 @@
 > 本地开发工作流（正常坐在电脑前使用 VSCode / CLI）不受本文影响，详见 [AGENT_USAGE_POLICY.md](AGENT_USAGE_POLICY.md) 和 [AI_WORKFLOW.md](AI_WORKFLOW.md)。
 > 远程编排是可选增强功能，不启用（不运行协调 Agent）时仓库行为完全不变。
 
-本文定义远程开发时的 Agent 协作方式。核心约束：**ChatGPT 通过 GitHub App 只能读取仓库，不能写入**——因此 GPT 到 Agent A 的任务传递需要用户手动复制（手机 GPT App → 消息通道发送给 Agent A）。GPT 能够自主检查 GitHub 进展（只读），但无法主动触发工作流。
+本文定义远程开发时的 Agent 协作方式。核心约束：**ChatGPT 通过 GitHub App 只能读取仓库，不能写入**——因此 GPT 到协调 Agent 的任务传递需要用户手动复制（手机 GPT App → 消息通道发送给协调 Agent）。GPT 能够自主检查 GitHub 进展（只读），但无法主动触发工作流。
+
+> **命名约定**：协调 Agent 和执行 Agent 是概念角色，用户可自定义名称（如 Zenvoy / Zenforge）。
 
 ## 角色定义
 
