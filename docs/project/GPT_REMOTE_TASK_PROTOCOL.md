@@ -15,7 +15,7 @@
 1. **读取进展**
    - 检查最新 commit（`git log` 或 GitHub commits 视图）
    - 阅读 `docs/project_status.md` 了解当前阶段、禁止事项、最近结论
-   - 如果有上次任务结果，读取 `docs/project/last-task-result.md`
+   - 读取 `docs/project/last-task-result.md`，了解上次任务执行结果（此文件由 Agent A 在 commit 时同步更新）
 
 2. **判断阶段**
    - 当前任务是否完成？
