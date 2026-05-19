@@ -15,7 +15,7 @@
 1. **读取进展**
    - 检查最新 commit（`git log` 或 GitHub commits 视图）
    - 阅读 `docs/project_status.md` 了解当前阶段、禁止事项、最近结论
-   - 读取 `docs/project/last-task-result.md`，了解上次任务执行结果（此文件由 Agent A 在 commit 时同步更新）
+   - 阅读 commit log 和 `docs/project_status.md` 了解当前进展和阶段
 
 2. **判断阶段**
    - 当前任务是否完成？
@@ -71,6 +71,11 @@ GPT (你) 检查进展 → 给任务提示词
 - push/tag/force push/依赖变更等高风险操作需要用户确认
 - 不写业务代码，不引入依赖
 
-## 上次任务结果
+## 项目记忆
 
-（Agent A 执行完任务后会更新这里，下次你读这里就知道上次做了什么）
+GPT 通过以下方式了解进展：
+- `git log` — 查看最近 commit 和变更
+- `docs/project_status.md` — 当前阶段、禁止事项、最近结论
+- 仓库文件变更 — 直接阅读修改后的文件
+
+不需要单独的"任务结果"文件，commit 记录就是进展。
