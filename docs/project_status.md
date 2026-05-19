@@ -2,9 +2,9 @@
 
 更新时间：2026-05-19
 当前分支：main
-当前阶段：Stage 0.1 / template workflow refinement
-当前定位：补充通用 Git、commit message、Stage 编号和 tag 规则，使模板库更适合多 Agent 长期项目复用。
-当前最高优先级：完成模板库的协作规则补强，不进入具体业务项目开发。
+当前阶段：Stage 0.2 / remote orchestration ready
+当前定位：远程 Agent 编排已跑通 Telegram 桥接闭环。已添加 GPT 角色协议文档，GPT 连接仓库后可自主检查进展、给出任务。
+当前最高优先级：模板库规则已够用，下一步应同步到具体业务项目。不进入具体业务项目开发。
 
 ## 当前摘要
 
@@ -27,7 +27,8 @@
 - 需要补充 Stage X / Stage X.Y / Stage X.Y.Z 编号规则。
 - 需要补充 tag 使用边界。
 - 需要在任务模板中加入 Git 汇报字段。
-- 已补充远程 Agent A / Agent B 编排规则，用于支持用户不在电脑前时的任务转交、结果汇报和权限确认。
+- 已补充远程 Agent A / Agent B 编排规则（Telegram 桥接闭环已跑通）。
+- 已添加 GPT 远程任务协议文档（GPT_REMOTE_TASK_PROTOCOL.md + last-task-result.md），GPT 连接仓库后知道自己的角色。
 
 ## 下一步建议
 
@@ -46,4 +47,6 @@
 - docs/project/AGENT_USAGE_POLICY.md
 - docs/project/GIT_AND_STAGE_WORKFLOW.md
 - docs/project/REMOTE_AGENT_ORCHESTRATION.md
+- docs/project/GPT_REMOTE_TASK_PROTOCOL.md
+- docs/project/last-task-result.md
 - docs/project/REPO_STRUCTURE.md
