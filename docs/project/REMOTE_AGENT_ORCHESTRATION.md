@@ -99,15 +99,14 @@ GitHub：
 
 默认可自动执行：
 
-- 读取 AGENTS.md、docs/project_status.md 和任务直接相关文件。
+- 读取文档和任务直接相关文件。
 - 编辑任务明确允许的文件。
 - 运行任务指定的本地验证命令。
-- 生成 diff 摘要和 Git 状态报告。
-- 创建本地任务队列文件。
+- `git commit` 和 `git push`（用户已授权，可通过 Agent A 切换模式）。
+- 更新 `docs/project_status.md`。
 
 默认需要确认：
 
-- `git push`
 - 创建或推送 tag
 - force push
 - 删除大量文件或清空目录
