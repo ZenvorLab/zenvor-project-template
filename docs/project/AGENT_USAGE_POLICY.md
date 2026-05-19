@@ -9,7 +9,6 @@
 - ChatGPT
 - Codex
 - Claude Code
-- Claude Code + DeepSeek
 - Cursor / Cline / Roo Code / 其它 VSCode Agent
 - 后续替换的新模型或新 Agent 工具
 

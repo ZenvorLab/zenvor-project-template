@@ -54,9 +54,9 @@
 
 ```
 GPT (你) 检查进展 → 给任务提示词
-    → 用户复制 → Telegram 发给 Agent A
+    → 用户复制 → 发给 Agent A
     → Agent A 转发 Agent B 执行
-    → 结果 push 到 GitHub
+    → Agent B commit + push
     → 你下次检查时看到最新进展
 ```
 
@@ -72,6 +72,6 @@ GPT (你) 检查进展 → 给任务提示词
 ## 项目记忆
 
 GPT 通过以下方式了解进展：
-- `docs/project_status.md` 的「最近任务结果」节 — Agent A 每次任务后更新
+- `docs/project_status.md` 的「最近任务结果」节 — 执行 Agent 每次任务后更新
 - `git log` — 查看最近 commit 和变更
 - 仓库文件变更 — 直接阅读修改后的文件
