@@ -24,12 +24,10 @@
 
 - 多 Agent 协作框架已完成（AGENTS.md、阶段边界、汇报规范）。
 - Git 工作流规则已建立（commit message 格式、Stage 编号、tag 边界）。
-- 远程 Agent 编排为可选模块（REMOTE_AGENT_ORCHESTRATION.md），不启用不影响本地开发。
-- GPT 角色协议可选（GPT_REMOTE_TASK_PROTOCOL.md），用于远程场景下 GPT 检查进展。
 
 ## 最近任务结果
 
-> 每次任务执行完毕后更新此节，记录最新执行结果。远程模式下由 Agent A 自动更新，GPT 通过 GitHub 读取。
+> 执行 Agent 每次任务完毕后更新此节，写入最新执行结果。
 
 （等待首次任务）
 
@@ -38,7 +36,7 @@
 - 将该模板规则同步应用到具体项目仓库。
 - 每个具体项目应根据自身目录结构、运行环境和隐私边界裁剪模板规则。
 - 进入业务实现前，应先确认该项目自己的当前阶段、禁止事项和验证边界。
-- 如需远程连续执行任务，先在本地 Agent A 工作区跑通文件队列模式，再接入 Telegram、飞书或其它消息通道。
+- 如需使用远程协调 Agent 工作流，参考 docs/project/REMOTE_AGENT_ORCHESTRATION.md。
 
 ## 历史详情入口
 

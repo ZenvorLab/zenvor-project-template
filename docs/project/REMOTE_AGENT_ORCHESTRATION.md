@@ -17,28 +17,24 @@ ChatGPT / Codex：
 
 Agent A / coordinator：
 
-- 通过 Telegram / 飞书接收用户转发的 GPT 任务提示词（也支持直接接收用户自己写的任务）。
+- 通过消息通道接收用户转发的 GPT 任务提示词（也支持用户直接写的任务）。
 - 原样转发 GPT 任务提示词给 Agent B，不修改、不包装、不添加额外约束。
 - 管理多个项目的多个 Agent B，统一路由、权限门和结果汇总。
 - 根据当前模式决定是否继续、暂停、请求用户确认或建议提交。
-- 通过 Telegram / 飞书向用户汇报 Agent B 执行结果、Git 状态和建议操作。
-- 用户回复 Telegram 决定 commit / push / 切换执行器 / 切换模型。
+- 通过消息通道向用户汇报执行结果和 Git 状态，请求确认。
 
 Agent B / executor：
 
-- 通过 Claude Code CLI 或 Codex CLI 在本地开发环境中执行具体文件修改、命令和验证。
-- Claude Code CLI 启动时携带 `--dangerously-skip-permissions` 以避免交互式权限确认。
-- Codex CLI 通过 `~/.codex/config.toml` 中 `sandbox_mode = danger-full-access` 和 per-project `trust_level = trusted` 实现自动审查。
-- Agent A 首次转交任务时会询问用户选择哪个执行器，用户可随时切换。
+- 通过 CLI 执行具体文件修改、命令和验证。
 - 遵守 AGENTS.md、docs/project_status.md 和当前任务提示词。
 - 不擅自扩大任务范围。
-- 完成后向 Agent A 汇报完整执行结果。
+- 完成后向 Agent A 汇报完整执行结果，并更新 `docs/project_status.md` 的「最近任务结果」节。
 
-用户（在户外，通过手机操作）：
+用户（远程场景，通过手机操作）：
 
-- 从手机 GPT App 复制任务提示词 → 粘贴到 Telegram 发给 Agent A。
-- 收到 Agent A 汇报后回复：commit / push / 切换执行器 / 切换模型等指令。
-- GPT 下次检查时直接从 GitHub 读取最新进展，用户不需要把 Agent B 的汇报反向发给 GPT。
+- 从手机 GPT App 复制任务提示词 → 发给 Agent A。
+- 收到 Agent A 汇报后回复 commit / push / 切换执行器等指令。
+- GPT 下次检查时从 GitHub 读取 project_status.md 获取进展，不需要用户反向发送汇报。
 
 GitHub：
 
