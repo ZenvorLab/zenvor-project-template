@@ -30,6 +30,12 @@
 - 已补充远程 Agent A / Agent B 编排规则（Telegram 桥接闭环已跑通）。
 - 已添加 GPT 远程任务协议文档（GPT_REMOTE_TASK_PROTOCOL.md + last-task-result.md），GPT 连接仓库后知道自己的角色。
 
+## 最近任务结果
+
+> Agent A 每次任务执行完毕后更新此节。GPT 读这里了解最新执行结果。
+
+（首次远程任务尚未执行）
+
 ## 下一步建议
 
 - 将该模板规则同步应用到具体项目仓库。
@@ -48,5 +54,4 @@
 - docs/project/GIT_AND_STAGE_WORKFLOW.md
 - docs/project/REMOTE_AGENT_ORCHESTRATION.md
 - docs/project/GPT_REMOTE_TASK_PROTOCOL.md
-- docs/project/last-task-result.md
 - docs/project/REPO_STRUCTURE.md
