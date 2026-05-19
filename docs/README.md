@@ -14,6 +14,7 @@
 - [project/DEVELOPMENT_BOUNDARIES.md](project/DEVELOPMENT_BOUNDARIES.md)：planning、artifact、validation、execution 的边界规则。
 - [project/AGENT_USAGE_POLICY.md](project/AGENT_USAGE_POLICY.md)：Codex、Claude Code、DeepSeek、其它 VSCode Agent 的使用和切换策略。
 - [project/GIT_AND_STAGE_WORKFLOW.md](project/GIT_AND_STAGE_WORKFLOW.md)：Git 工作流、commit message、Stage 编号、tag 和汇报规则。
+- [project/REMOTE_AGENT_ORCHESTRATION.md](project/REMOTE_AGENT_ORCHESTRATION.md)：用户不在电脑前时的 Agent A / Agent B 远程编排、权限确认和消息汇报规则。
 - [project/REPO_STRUCTURE.md](project/REPO_STRUCTURE.md)：推荐仓库结构和目录用途。
 
 ## 阶段文档

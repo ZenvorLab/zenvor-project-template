@@ -27,12 +27,14 @@
 - 需要补充 Stage X / Stage X.Y / Stage X.Y.Z 编号规则。
 - 需要补充 tag 使用边界。
 - 需要在任务模板中加入 Git 汇报字段。
+- 已补充远程 Agent A / Agent B 编排规则，用于支持用户不在电脑前时的任务转交、结果汇报和权限确认。
 
 ## 下一步建议
 
 - 将该模板规则同步应用到具体项目仓库。
 - 每个具体项目应根据自身目录结构、运行环境和隐私边界裁剪模板规则。
 - 进入业务实现前，应先确认该项目自己的当前阶段、禁止事项和验证边界。
+- 如需远程连续执行任务，先在本地 Agent A 工作区跑通文件队列模式，再接入 Telegram、飞书或其它消息通道。
 
 ## 历史详情入口
 
@@ -43,4 +45,5 @@
 - docs/project/DEVELOPMENT_BOUNDARIES.md
 - docs/project/AGENT_USAGE_POLICY.md
 - docs/project/GIT_AND_STAGE_WORKFLOW.md
+- docs/project/REMOTE_AGENT_ORCHESTRATION.md
 - docs/project/REPO_STRUCTURE.md
