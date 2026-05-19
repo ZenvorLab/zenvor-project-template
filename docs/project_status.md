@@ -1,14 +1,14 @@
 # Project Status
 
-更新时间：2026-05-19
+更新时间：（更新时填写）
 当前分支：main
-当前阶段：Stage 0.2 / remote orchestration ready
-当前定位：远程 Agent 编排已跑通 Telegram 桥接闭环。已添加 GPT 角色协议文档，GPT 连接仓库后可自主检查进展、给出任务。
-当前最高优先级：模板库规则已够用，下一步应同步到具体业务项目。不进入具体业务项目开发。
+当前阶段：Stage 0 / project template
+当前定位：通用项目模板库，提供多 Agent 协作框架和项目管理文档模板。新项目克隆后根据自身需求裁剪。
+当前最高优先级：模板规则完善。不进入具体业务开发。
 
 ## 当前摘要
 
-本仓库是通用项目模板库，当前只维护长期可复用的项目管理文档。当前任务不写业务代码，不创建具体项目功能，不引入依赖。
+本仓库是通用项目模板库，只维护长期可复用的项目管理文档和 Agent 协作规则。不写业务代码、不创建功能、不引入依赖。
 
 ## 当前禁止事项
 
@@ -22,19 +22,16 @@
 
 ## 最近关键结论
 
-- 模板库已有多 Agent 协作入口。
-- 需要补充 commit message 格式。
-- 需要补充 Stage X / Stage X.Y / Stage X.Y.Z 编号规则。
-- 需要补充 tag 使用边界。
-- 需要在任务模板中加入 Git 汇报字段。
-- 已补充远程 Agent A / Agent B 编排规则（Telegram 桥接闭环已跑通）。
-- 已添加 GPT 远程任务协议文档（GPT_REMOTE_TASK_PROTOCOL.md + last-task-result.md），GPT 连接仓库后知道自己的角色。
+- 多 Agent 协作框架已完成（AGENTS.md、阶段边界、汇报规范）。
+- Git 工作流规则已建立（commit message 格式、Stage 编号、tag 边界）。
+- 远程 Agent 编排为可选模块（REMOTE_AGENT_ORCHESTRATION.md），不启用不影响本地开发。
+- GPT 角色协议可选（GPT_REMOTE_TASK_PROTOCOL.md），用于远程场景下 GPT 检查进展。
 
 ## 最近任务结果
 
-> Agent A 每次任务执行完毕后更新此节。GPT 读这里了解最新执行结果。
+> 每次任务执行完毕后更新此节，记录最新执行结果。远程模式下由 Agent A 自动更新，GPT 通过 GitHub 读取。
 
-（首次远程任务尚未执行）
+（等待首次任务）
 
 ## 下一步建议
 

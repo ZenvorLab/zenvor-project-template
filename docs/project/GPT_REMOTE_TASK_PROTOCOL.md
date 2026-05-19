@@ -62,13 +62,12 @@ GPT (你) 检查进展 → 给任务提示词
 
 所以你给的任务提示词会被**原样传递给执行 Agent**。请确保任务描述完整、边界清晰、可以直接执行。
 
-## 当前项目约定
+## 项目约定
 
-- 这是一个**模板仓库**，当前阶段是 workflow refinement
 - commit 格式：`<type>(<scope>): <summary>`
 - 大阶段用 `Stage X`，子阶段 `Stage X.Y`
 - push/tag/force push/依赖变更等高风险操作需要用户确认
-- 不写业务代码，不引入依赖
+- 遵守 `docs/project_status.md` 中列出的禁止事项
 
 ## 项目记忆
 
