@@ -1,6 +1,6 @@
 # Documentation Index
 
-本文是项目文档索引。新 Agent 进入仓库后，应先阅读根目录 AGENTS.md 和 docs/project_status.md，再根据任务需要读取本索引中的具体文档。
+本文是项目文档索引。新 Agent 进入仓库后，应先阅读根目录 AGENTS.md（通用）、CLAUDE.md（Claude Code 专属）和 docs/project_status.md，再根据任务需要读取本索引中的具体文档。
 
 ## 当前状态入口
 

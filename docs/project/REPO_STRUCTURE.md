@@ -3,6 +3,8 @@
 推荐结构：
 
 ```text
+AGENTS.md
+CLAUDE.md
 docs/
   README.md
   project_status.md
