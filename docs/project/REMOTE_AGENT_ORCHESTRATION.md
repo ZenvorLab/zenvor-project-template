@@ -73,6 +73,8 @@ project-steward/
   scripts/
     start-agent-a.ps1
     new-handoff.ps1
+    telegram-bridge.ps1
+    start-telegram-bridge.ps1
 ```
 
 其中 `config/*.local.json`、`queue/`、`logs/`、通信 token 和运行输出不应提交到业务仓库。
