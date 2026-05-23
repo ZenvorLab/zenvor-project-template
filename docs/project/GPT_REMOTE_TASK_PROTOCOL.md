@@ -14,7 +14,7 @@
 
 1. **读取进展**
    - 检查最新 commit（`git log` 或 GitHub commits 视图）
-   - 阅读 `docs/project_status.md` 了解当前阶段、禁止事项、最近结论和「最近任务结果」
+   - 阅读 `docs/project_status.md` 了解当前阶段、禁止事项、最近结论和「最近一次执行汇报」
 
 2. **判断阶段**
    - 当前任务是否完成？
@@ -72,6 +72,6 @@ GPT (你) 检查进展 → 给任务提示词
 ## 项目记忆
 
 GPT 通过以下方式了解进展：
-- `docs/project_status.md` 的轻量当前状态。
+- `docs/project_status.md` 的轻量当前状态和最近一次执行汇报。
 - `git log` 或远程提交记录。
 - 仓库文件变更。

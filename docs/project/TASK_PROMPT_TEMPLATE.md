@@ -65,6 +65,7 @@ Git 操作：
 - 是否允许 force push：no，除非用户另行明确确认
 
 完成后汇报：
+- 先更新 docs/project_status.md 的“最近一次执行汇报”
 - 修改文件
 - 新增或更新的能力/规则
 - 运行命令及结果
@@ -91,7 +92,7 @@ Git 操作：
 本次任务允许：
 - 新增或更新指定文档。
 - 修正文档索引链接。
-- 更新 docs/project_status.md 的轻量当前状态。
+- 更新 docs/project_status.md 的轻量当前状态和最近一次执行汇报。
 
 本次任务禁止：
 - 写业务功能代码。
@@ -129,7 +130,7 @@ docs(<scope>): <summary>
 本次任务允许：
 - 按当前阶段边界修改指定文件。
 - 更新当前 stage 文档。
-- 更新 docs/project_status.md 的当前状态和下一步。
+- 更新 docs/project_status.md 的当前状态、最近一次执行汇报和下一步。
 
 本次任务禁止：
 - 擅自进入下一阶段。
@@ -192,7 +193,7 @@ fix(<scope>): <summary>
 - 整理真实完成情况。
 - 记录失败、阻塞和未验证项。
 - 更新 closure / failure analysis 文档。
-- 更新 docs/project_status.md 的轻量状态。
+- 更新 docs/project_status.md 的轻量状态和最近一次执行汇报。
 
 本次任务禁止：
 - 把失败分析完成写成验证通过。

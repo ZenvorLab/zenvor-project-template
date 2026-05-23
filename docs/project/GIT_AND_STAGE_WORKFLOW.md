@@ -92,7 +92,7 @@ data(samples): add fake task examples
 - `Stage X.Y` 用于能独立汇报、独立提交、独立验证的小开发阶段。
 - `Stage X.Y.Z` 用于更细粒度的任务或验证点，不一定每个都需要单独文档。
 - 小阶段编号必须服务于项目管理，不要为了显得复杂而过度拆分。
-- docs/project_status.md 只记录当前阶段和最近关键结论，不保存完整历史。
+- docs/project_status.md 只记录当前阶段、最近关键结论和最近一次执行汇报，不保存完整历史。
 - 详细阶段历史放入 docs/stage*/ 或 docs/project/history/。
 
 示例：
@@ -122,11 +122,14 @@ Stage 1.2.1 - Schema validation smoke check
 ## project_status.md 与 Stage Summary 边界
 
 - docs/project_status.md 是轻量当前状态入口。
-- 不保存完整日志。
+- 保存最近一次完整执行汇报。
+- 不保存完整历史日志。
 - 不保存长命令输出。
 - 不复制完整 stage summary。
 - stage plan / summary / closure 放入 docs/stage*/。
 - 历史记录放入 docs/project/history/。
+
+每次任务完成后，应先更新 docs/project_status.md 的最近一次执行汇报，再按任务授权执行 commit / push。
 
 ## Agent 汇报中的 Git 信息
 

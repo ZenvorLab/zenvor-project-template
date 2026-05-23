@@ -4,7 +4,7 @@
 
 ## 当前状态入口
 
-- [project_status.md](project_status.md)：轻量当前状态入口，只记录当前阶段、当前定位、当前禁止事项、最近关键结论和下一步建议。
+- [project_status.md](project_status.md)：轻量当前状态入口，记录当前阶段、当前定位、当前禁止事项、最近关键结论、最近一次执行汇报和下一步建议。
 
 ## 多 Agent 项目规则
 
@@ -22,4 +22,4 @@
 
 详细历史、阶段计划、阶段总结和 closure 文档应放在 docs/stage*/ 下。
 
-docs/project_status.md 不复制完整阶段历史，不保存长命令日志，不保存 outputs 内容。
+docs/project_status.md 不复制完整阶段历史，不保存长命令日志，不保存 outputs 内容；它只保留最近一次完整执行汇报，下一次任务完成后覆盖更新。

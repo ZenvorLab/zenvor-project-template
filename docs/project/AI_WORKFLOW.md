@@ -57,7 +57,7 @@ GitHub：
 - 不要每次任务都让 Agent 重读所有历史文档。
 - 任务提示词应包含必须阅读、可选阅读、不要阅读。
 - 大文档必须拆分。
-- docs/project_status.md 必须保持轻量。
+- docs/project_status.md 必须保持轻量，但必须包含最近一次完整执行汇报。
 - 详细命令日志放到对应 stage 文档，不放 docs/project_status.md。
 - 长会话压缩后，应优先依赖仓库内轻量文档恢复上下文。
 - 小任务只读取 AGENTS.md、docs/project_status.md 和直接相关文件。

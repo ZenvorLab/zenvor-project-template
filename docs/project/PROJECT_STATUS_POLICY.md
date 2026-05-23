@@ -1,8 +1,8 @@
 # Project Status Policy
 
-docs/project_status.md 是当前状态入口，用于让 ChatGPT、Codex、Claude Code、其它 VSCode Agent 和后续新 Agent 快速了解当前阶段。
+docs/project_status.md 是当前状态入口，用于让 ChatGPT、Codex、Claude Code、其它 VSCode Agent 和后续新 Agent 快速了解当前阶段和上一步执行结果。
 
-它不是完整开发日志，不保存完整历史验证命令，不复制 stage summary。
+它不是完整开发日志，不保存长期流水，不复制 stage summary。它必须保存最近一次任务的完整执行汇报；下一次任务完成后覆盖该汇报。
 
 ## 建议模板
 
@@ -21,7 +21,7 @@ docs/project_status.md 是当前状态入口，用于让 ChatGPT、Codex、Claud
 
 ## 最近关键结论
 
-## 最近任务结果
+## 最近一次执行汇报
 
 ## 下一步建议
 
@@ -37,9 +37,23 @@ docs/project_status.md 只应记录：
 - 当前最高优先级。
 - 当前禁止事项。
 - 最近关键结论。
-- 最近任务结果。
+- 最近一次执行汇报。
 - 下一步建议。
 - 详细文档入口。
+
+最近一次执行汇报必须记录：
+
+- 任务目标。
+- 修改文件。
+- 新增或更新的能力/规则。
+- 运行命令及结果。
+- 通过项。
+- 未运行项及原因。
+- 失败、不确定结果或残余风险。
+- Git 状态（commit / push / tag / 未提交修改）。
+- outputs / logs 情况。
+- 敏感或临时文件情况。
+- 是否可以进入下一步。
 
 ## 明确限制
 
@@ -49,5 +63,6 @@ docs/project_status.md 只应记录：
 - 不复制所有阶段历史。
 - 不保存 outputs 内容。
 - 不保存二进制 artifact 路径列表，除非是当前关键结论。
+- 不累积多次任务流水；只保留最近一次完整执行汇报。
 
 详细历史应放入 docs/stage*/ 或 docs/project/history/。

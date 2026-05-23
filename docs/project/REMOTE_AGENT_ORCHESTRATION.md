@@ -13,6 +13,7 @@
 ## 基本原则
 
 - 仓库仍以 AGENTS.md、docs/project_status.md 和当前任务提示词为准。
+- docs/project_status.md 必须包含最近一次执行汇报，作为 GPT 和后续 Agent 的接续入口。
 - 远程编排只负责传递任务、执行低风险授权操作、汇报结果。
 - 任务提示词应原样传递，不能被协调层改写成更宽的授权。
 - 真实消息通道、执行器命令、token、queue、logs、outputs 和本地配置必须留在业务仓库之外。
@@ -48,7 +49,7 @@
 - 遵守 AGENTS.md、docs/project_status.md 和当前任务提示词。
 - 不擅自扩大任务范围。
 - 按任务授权决定是否 commit / push。
-- 完成后向 Agent A / Zenvoy 汇报真实结果，并按边界更新 docs/project_status.md。
+- 完成后向 Agent A / Zenvoy 汇报真实结果，并把同一份汇报写入 docs/project_status.md 的“最近一次执行汇报”。
 
 ## 推荐控制工作区
 
@@ -92,7 +93,7 @@
 - 读取 AGENTS.md、docs/project_status.md 和任务直接相关文件。
 - 编辑任务明确允许的文件。
 - 运行任务指定的本地验证命令。
-- 更新 docs/project_status.md 的轻量当前状态。
+- 更新 docs/project_status.md 的轻量当前状态和最近一次执行汇报。
 - 在任务明确授权时执行 git add / commit / push。
 
 默认需要确认：
@@ -126,7 +127,7 @@
   -> Agent A / Zenvoy 汇总状态并发给用户
 ```
 
-如果规划 Agent 只能只读仓库，则下一轮检查应以 Git 远程状态、commit 记录和 docs/project_status.md 为事实来源。
+如果规划 Agent 只能只读仓库，则下一轮检查应以 Git 远程状态、commit 记录和 docs/project_status.md 的最近一次执行汇报为事实来源。
 
 ## 汇报要求
 
@@ -143,6 +144,8 @@ Agent A / Zenvoy 汇报必须包含：
 - 需要用户确认的问题。
 
 Agent B / Zenforge 汇报必须包含 AGENTS.md 中要求的完整执行结果，并明确区分 planning、offline artifact、dry-run、interface validation、simulation validation、real execution 和 production capability。
+
+Agent B / Zenforge 完成任务时，必须先把完整汇报写入 docs/project_status.md，再按任务授权提交和推送。聊天或消息通道里的汇报可以是摘要，但仓库内状态文档必须能独立说明上一步执行情况。
 
 ## 执行器配置
 

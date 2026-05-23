@@ -36,7 +36,7 @@ logs/          # ignored
 
 ## 目录说明
 
-- docs/project_status.md 只放当前状态。
+- docs/project_status.md 只放当前状态和最近一次执行汇报。
 - docs/stage*/ 放阶段计划、总结、分析、closure。
 - docs/project/ 放长期项目规则。
 - scripts/stage*/ 放阶段脚本。

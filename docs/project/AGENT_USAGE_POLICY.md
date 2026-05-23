@@ -29,7 +29,7 @@
 - 不读取 outputs/。
 - 不读取 logs/。
 - 大文档应拆分。
-- docs/project_status.md 保持短小。
+- docs/project_status.md 保持短小，但必须包含最近一次完整执行汇报。
 - 详细历史只读对应 stage 文档。
 
 ## 低成本模型使用建议
@@ -63,3 +63,5 @@ DeepSeek 或其它低成本模型可用于：
 - 是否有 outputs。
 - 是否提交敏感或临时文件。
 - 下一步建议。
+
+同一份汇报必须写入 docs/project_status.md 的“最近一次执行汇报”，方便 GPT 和后续 Agent 接续。
