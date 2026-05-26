@@ -1,53 +1,44 @@
 # Repository Structure
 
-推荐结构：
+## 推荐结构
 
-```text
-AGENTS.md
-CLAUDE.md
+```
+AGENTS.md              # 所有 Agent 通用规则（权威入口）
+CLAUDE.md              # Claude Code 专属配置
 docs/
-  README.md
-  project_status.md
-  project/
-    AI_WORKFLOW.md
-    PROJECT_STATUS_POLICY.md
-    TASK_PROMPT_TEMPLATE.md
-    DEVELOPMENT_BOUNDARIES.md
-    AGENT_USAGE_POLICY.md
+  project_status.md    # 轻量当前状态入口
+  project/             # 长期项目规则
     GIT_AND_STAGE_WORKFLOW.md
     REMOTE_AGENT_ORCHESTRATION.md
-    GPT_REMOTE_TASK_PROTOCOL.md
+    TASK_PROMPT_TEMPLATE.md
     REPO_STRUCTURE.md
   stage0/
+    stage0.1/          # 阶段 0.1：计划、总结、closure
+    stage0.2/
   stage1/
-  stage2/
+    stage1.1/
+    stage1.2/
 
-scripts/
-  stage0/
-  stage1/
-  smoke/
-  analysis/
-
+scripts/               # 按阶段组织脚本
 configs/
-
-outputs/       # ignored
-logs/          # ignored
+outputs/               # 不提交
+logs/                  # 不提交
 ```
 
 ## 目录说明
 
-- docs/project_status.md 只放当前状态和最近一次执行汇报。
-- docs/stage*/ 放阶段计划、总结、分析、closure。
-- docs/project/ 放长期项目规则。
-- scripts/stage*/ 放阶段脚本。
-- scripts/smoke/ 放轻量冒烟验证脚本。
-- scripts/analysis/ 放分析脚本。
-- configs/ 放配置和 schema。
-- outputs/ 不提交。
-- logs/ 不提交。
+| 目录 | 用途 | 提交 |
+|---|---|---|
+| docs/project_status.md | 当前阶段和最近一次执行汇报 | 是 |
+| docs/project/ | 长期项目规则 | 是 |
+| docs/stage<N>/stage<N>.<M>/ | 阶段计划、总结、closure | 是 |
+| scripts/ | 阶段脚本、冒烟验证、分析脚本 | 按需 |
+| configs/ | 配置和 schema | 按需 |
+| outputs/ | 运行产物 | 否 |
+| logs/ | 日志 | 否 |
 
 ## 阅读建议
 
-小任务优先阅读 AGENTS.md、docs/project_status.md 和直接相关文件。
-
-跨阶段整理任务再阅读 docs/project/REPO_STRUCTURE.md、docs/README.md 和多个 stage summary。
+- 小任务：AGENTS.md + docs/project_status.md + 1-3 个直接相关文件。
+- 阶段推进：加上当前 stage plan/summary。
+- 跨阶段整理：加上 docs/project/ 下的规则文档。

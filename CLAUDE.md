@@ -30,6 +30,6 @@
 
 ## 与 AGENTS.md 的关系
 
-- AGENTS.md：所有 Agent（ChatGPT、Codex、Claude Code、Cursor 等）通用规则。
+- AGENTS.md：所有 Agent 通用规则，是仓库唯一权威入口。
 - CLAUDE.md：Claude Code 专属入口和配置。
-- 如果两者内容冲突，以 AGENTS.md 为准（AGENTS.md 是仓库唯一权威入口）。
+- 两者冲突时以 AGENTS.md 为准。
