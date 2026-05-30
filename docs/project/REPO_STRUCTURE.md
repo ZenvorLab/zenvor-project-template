@@ -13,11 +13,10 @@ docs/
     TASK_PROMPT_TEMPLATE.md
     REPO_STRUCTURE.md
   stage0/
-    stage0.1/          # 阶段 0.1：计划、总结、closure
-    stage0.2/
+    stage0_0_xxx.md       # 子阶段文档，一个子阶段一个文件
   stage1/
-    stage1.1/
-    stage1.2/
+    stage1_0_xxx.md
+    stage1_1_xxx.md
 
 scripts/               # 按阶段组织脚本
 configs/
@@ -31,7 +30,7 @@ logs/                  # 不提交
 |---|---|---|
 | docs/project_status.md | 当前阶段和最近一次执行汇报 | 是 |
 | docs/project/ | 长期项目规则 | 是 |
-| docs/stage<N>/stage<N>.<M>/ | 阶段计划、总结、closure | 是 |
+| docs/stage<N>/ | 阶段文档，每个子阶段一个文件 | 是 |
 | scripts/ | 阶段脚本、冒烟验证、分析脚本 | 按需 |
 | configs/ | 配置和 schema | 按需 |
 | outputs/ | 运行产物 | 否 |

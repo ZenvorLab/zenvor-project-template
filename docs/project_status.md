@@ -39,4 +39,4 @@
 - docs/project/REMOTE_AGENT_ORCHESTRATION.md
 - docs/project/TASK_PROMPT_TEMPLATE.md
 - docs/project/REPO_STRUCTURE.md
-- docs/stage<N>/stage<N>.<M>/（各阶段详细文档）
+- docs/stage<N>/（各阶段文档，每个子阶段一个文件）

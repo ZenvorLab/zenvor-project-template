@@ -26,10 +26,12 @@
 
 ## 阶段规则
 
-- 一个项目不超过 10 个大阶段（Stage 0 ~ Stage 9），每个阶段给出较大的任务块，避免碎片化。
+- 一个项目建议不超过 10 个大阶段，每个阶段给出较大的任务块，避免碎片化。
 - 阶段编号：`Stage X`（大阶段）/ `Stage X.Y`（子阶段）/ `Stage X.Y.Z`（验证点）。
-- **每次任务完成后必须更新 docs/project_status.md**，确保文档反映当前真实阶段，避免文档滞后。
-- 阶段文档放入 `docs/stage<N>/stage<N>.<M>/`，例如 `docs/stage1/stage1.1/`、`docs/stage1/stage1.2/`。
+- **子阶段必须完成才能开启下一个**，不能只做了一部分就跳到新阶段，避免与总路线偏离。
+- 遇到阻塞时，先搜索网络查找类似问题和解决方案，不主观猜测。
+- 每个子阶段只写一个文档（如 `stage1_0_xxx.md`），不无限堆叠。
+- **每次任务完成后必须更新 docs/project_status.md**，确保文档反映当前真实阶段。
 - docs/project_status.md 保持轻量（建议 150~250 行），不累积长期流水，只保留最近一次执行汇报。
 
 ## Git 规则
@@ -76,10 +78,10 @@ docs/
     TASK_PROMPT_TEMPLATE.md
     REPO_STRUCTURE.md
   stage0/
-    stage0.1/
+    stage0_0_xxx.md
   stage1/
-    stage1.1/
-    stage1.2/
+    stage1_0_xxx.md
+    stage1_1_xxx.md
 
 scripts/
 configs/

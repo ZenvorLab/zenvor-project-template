@@ -29,9 +29,14 @@ fix(schema): correct sample field name
 
 ## Stage 编号
 
-- `Stage X`：大阶段（不超过 10 个，Stage 0 ~ Stage 9）。
+- `Stage X`：大阶段（建议不超过 10 个）。
 - `Stage X.Y`：子阶段，可独立汇报和提交。
 - `Stage X.Y.Z`：更细粒度的任务或验证点。
+- **子阶段必须完成才能开启下一个**，不能只做了一部分就跳到新阶段。
+- 遇到阻塞时先搜索网络查找解决方案，不主观猜测。
+
+每个子阶段只写一个文档，文件名格式：`stage<X>_<Y>_<descriptive_name>.md`。
+例如：`stage12_0_global_localization_preflight.md`、`stage12_1_simulation_mission_contract.md`
 
 每次任务完成后必须更新 docs/project_status.md，确保阶段信息与实际进度一致。
 
@@ -44,5 +49,5 @@ fix(schema): correct sample field name
 ## project_status.md 与 Stage Summary 的边界
 
 - docs/project_status.md：轻量当前状态入口，只保留最近一次执行汇报。
-- docs/stage<N>/stage<N>.<M>/：阶段计划、总结、closure（如 docs/stage1/stage1.1/）。
+- docs/stage<N>/：阶段文档（如 `docs/stage1/stage1_0_xxx.md`）。
 - docs/project/history/：历史记录（如需要）。
