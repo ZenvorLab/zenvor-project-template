@@ -36,8 +36,3 @@ logs/                  # 不提交
 | outputs/ | 运行产物 | 否 |
 | logs/ | 日志 | 否 |
 
-## 阅读建议
-
-- 小任务：AGENTS.md + docs/project_status.md + 1-3 个直接相关文件。
-- 阶段推进：加上当前 stage plan/summary。
-- 跨阶段整理：加上 docs/project/ 下的规则文档。

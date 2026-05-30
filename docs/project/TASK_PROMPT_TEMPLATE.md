@@ -17,7 +17,7 @@
 
 验证要求：<command or check>
 
-Git：允许/不允许 commit/push，不允许 force push
+Git：本地允许 commit，push 仅在阶段完成时 squash 执行；不允许 force push
 
 完成后：
 1. 更新 docs/project_status.md 的最近一次执行汇报

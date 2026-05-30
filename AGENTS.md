@@ -21,8 +21,9 @@
   - 不把 dry-run 通过写成真实运行通过。
   - 不把单点验证写成系统完成。
 - 失败结果必须真实记录，不包装成成功。
-- 不提交敏感数据（token、密码、账号、cookie）。
+- 不提交敏感数据（.env、token、密码、账号、cookie、session）。
 - 不提交 outputs/、logs/、缓存和本地临时产物。
+- 示例数据使用 fake/sample。
 
 ## 阶段规则
 
@@ -37,6 +38,8 @@
 ## Git 规则
 
 - commit message：`<type>(<scope>): <summary>`
+- 每个大阶段从 main 开分支，阶段内频繁本地 commit，不推远端。
+- 阶段全部完成后 squash merge 到 main 再推送，远端只看到干净的阶段提交。
 - 不允许 force push 到 main。
 - 用户说"本次先不 git"时不执行 git 操作。
 - 详细规则见 [docs/project/GIT_AND_STAGE_WORKFLOW.md](docs/project/GIT_AND_STAGE_WORKFLOW.md)。
@@ -58,12 +61,6 @@
 ## 远程编排（可选）
 
 支持通过 Agent A (Zenvoy) / Agent B (Zenforge) 远程执行任务，详见 [docs/project/REMOTE_AGENT_ORCHESTRATION.md](docs/project/REMOTE_AGENT_ORCHESTRATION.md)。
-
-## 输出和隐私
-
-- outputs/ 和 logs/ 默认不提交。
-- .env、token、API key、cookie、session 等敏感数据不提交。
-- 示例数据使用 fake/sample。
 
 ## 推荐仓库结构
 

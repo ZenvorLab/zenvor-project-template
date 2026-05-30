@@ -1,10 +1,30 @@
 # Git and Stage Workflow
 
-## 分支规则
+## 分支与推送策略
 
-- `main`：稳定主线。
-- `stageX` 或 `stageX_<name>`：大阶段开发分支。
-- `feature/<name>` / `fix/<name>` / `docs/<name>`：功能/修复/文档分支。
+分支结构：
+- `main`：稳定主线，只接受阶段完成后的 squash merge。
+- `stageX`：大阶段开发分支，从 main 创建。
+
+```
+main ────●────────────●────────────●
+         ↑            ↑            ↑
+      stage1       stage2       stage3
+    (全部完成后      (全部完成后
+     squash merge)   squash merge)
+```
+
+工作流：
+1. 从 main 开阶段分支：`git checkout -b stage1 main`
+2. 阶段内频繁本地 commit，不推远端
+3. 阶段全部完成后 squash 合并到 main：
+   ```
+   git checkout main
+   git merge --squash stage1
+   git commit -m "feat(stage1): 完成阶段1"
+   git push
+   ```
+4. 下一阶段从最新 main 开分支
 
 通用规则：
 - 不允许 force push 到 main。
@@ -50,4 +70,3 @@ fix(schema): correct sample field name
 
 - docs/project_status.md：轻量当前状态入口，只保留最近一次执行汇报。
 - docs/stage<N>/：阶段文档（如 `docs/stage1/stage1_0_xxx.md`）。
-- docs/project/history/：历史记录（如需要）。

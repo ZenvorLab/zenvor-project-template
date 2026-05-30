@@ -24,10 +24,6 @@
 
 权限策略和自动化模式由项目具体配置，模板此处为示例。
 
-## 远程编排
-
-本仓库支持远程 Agent 编排（可选，详见 docs/project/REMOTE_AGENT_ORCHESTRATION.md）。Claude Code 在远程模式下作为 Agent B 执行任务。
-
 ## 与 AGENTS.md 的关系
 
 - AGENTS.md：所有 Agent 通用规则，是仓库唯一权威入口。
